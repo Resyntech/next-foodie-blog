@@ -26,7 +26,7 @@ const Recipe = () => {
         })
         setState(array)
       }),
-    []
+    [query]
   )
 
   return (

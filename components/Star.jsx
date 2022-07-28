@@ -10,7 +10,7 @@ const Star = ({ ...props }) => {
 
   React.useEffect(
     () => dispatch(rating({ id: props.id, rating: state })),
-    [state]
+    [state, dispatch, props.id]
   )
 
   return (

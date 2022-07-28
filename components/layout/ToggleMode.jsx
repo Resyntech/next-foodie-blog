@@ -6,7 +6,7 @@ const ToggleMode = ({ children }) => {
   const dispatch = useDispatch()
   const darkMode = useSelector((state) => state.ui.darkMode)
 
-  React.useEffect(() => dispatch(getUI()), [])
+  React.useEffect(() => dispatch(getUI()), [dispatch])
 
   return <div className={darkMode ? "dark" : ""}>{children}</div>
 }

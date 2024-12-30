@@ -37,8 +37,8 @@ const Signin = () => {
               style="text-md font-normal"
               label="Don’t have an account?"
             />
-            <Link href="/Signup">
-              <a className="text-md text-[#248AF0] font-normal">Sign Up</a>
+            <Link href="/Signup" className="text-md text-[#248AF0] font-normal">
+              Sign Up
             </Link>
           </div>
 
@@ -71,7 +71,10 @@ const Signin = () => {
               alt="Liiiine"
               width={1}
               height={400}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
 
             <div className="flex flex-col gap-4">
               <div className="flex">
@@ -80,7 +83,10 @@ const Signin = () => {
                   alt="Facebook Logo"
                   width={dimension}
                   height={dimension}
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <Button
                   style="w-full rounded-none dark:text-white text-xs bg-[#124699] dark:bg-[#124699]"
                   onClick={() => {
@@ -96,7 +102,10 @@ const Signin = () => {
                   alt="Google Logo"
                   width={dimension}
                   height={dimension}
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <Button
                   style="w-full rounded-none dark:text-white text-xs bg-[#3478E3] dark:bg-[#3478E3]"
                   onClick={() => {
@@ -111,7 +120,7 @@ const Signin = () => {
         </div>
       </Background>
     </ToggleMode>
-  )
+  );
 }
 
 export default Signin

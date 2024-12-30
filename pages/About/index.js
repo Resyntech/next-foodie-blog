@@ -4,18 +4,25 @@ import { Background, ToggleMode } from "../../components/layout"
 
 const About = () => {
   return (
-    <ToggleMode>
+    (<ToggleMode>
       <SEO
         title="Foodie Blog | About"
         href="/Logo.png"
         description="Craavingsssss"
       />
-
       <Header />
       <Background>
         <div className="grid grid-cols-2 py-10 items-center text-center text-3xl font-black absolute inset-0">
           <div className="self-center">
-            <Image src="/Chef.png" alt="Master Chef" width={380} height={500} />
+            <Image
+              src="/Chef.png"
+              alt="Master Chef"
+              width={380}
+              height={500}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className="flex flex-col items-center gap-10 self-center justify-center">
             <Typography style="heading" label="Lorem Ipsum" />
@@ -27,8 +34,8 @@ const About = () => {
           </div>
         </div>
       </Background>
-    </ToggleMode>
-  )
+    </ToggleMode>)
+  );
 }
 
 export default About

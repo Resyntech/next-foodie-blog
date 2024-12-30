@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Social = ({ ...props }) => {
   return (
-    <div className={props.style}>
+    (<div className={props.style}>
       <a href="#" target="_blank" rel="noopener noreferrer">
         <span>
           <Image
@@ -11,7 +11,10 @@ const Social = ({ ...props }) => {
             alt="Facebook Logo"
             width={props.dimension}
             height={props.dimension}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </span>
       </a>
       <a href="#" target="_blank" rel="noopener noreferrer">
@@ -22,7 +25,10 @@ const Social = ({ ...props }) => {
             alt="Instagram Logo"
             width={props.dimension}
             height={props.dimension}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </span>
       </a>
       <a href="#" target="_blank" rel="noopener noreferrer">
@@ -33,7 +39,10 @@ const Social = ({ ...props }) => {
             alt="Twitter Logo"
             width={props.dimension}
             height={props.dimension}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </span>
       </a>
       <a href="#" target="_blank" rel="noopener noreferrer">
@@ -44,11 +53,14 @@ const Social = ({ ...props }) => {
             alt="In Logo"
             width={props.dimension}
             height={props.dimension}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </span>
       </a>
-    </div>
-  )
+    </div>)
+  );
 }
 
 export default Social

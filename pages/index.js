@@ -68,14 +68,13 @@ const Home = () => {
   })
 
   return (
-    <ToggleMode>
+    (<ToggleMode>
       <SEO
         title="Foodie Blog | Home"
         href="/Logo.png"
         description="Craavingsssss"
       />
       <Header />
-
       <Background>
         <div className="grid md:grid-cols-2 h-screen">
           <div className="flex flex-col gap-12 items-center text-left mt-20 lg:mt-40">
@@ -106,7 +105,10 @@ const Home = () => {
                 alt="Food Foreground Image"
                 width={490}
                 height={345}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <div className="absolute z-40 xl:p-40 xl:px-56 rounded-3xl text-themeColor bg-themeColor dark:text-slate-900 dark:bg-slate-900 ease-in-out duration-300 top-10 left-10 w-fit">
               lorem
@@ -126,8 +128,8 @@ const Home = () => {
           </button>
         </div>
       </Background>
-    </ToggleMode>
-  )
+    </ToggleMode>)
+  );
 }
 
 export default Home

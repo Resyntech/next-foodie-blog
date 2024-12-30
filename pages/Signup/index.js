@@ -29,8 +29,8 @@ const Signup = () => {
         <Typography style='text-7xl mt-10 font-normal' label='Sign Up' />
         <div className="flex gap-2">
           <Typography style='text-md font-normal' label='Already have an account?' />
-          <Link href='/Signin'>
-            <a className="text-md text-[#248AF0] font-normal">Sign In</a>
+          <Link href='/Signin' className="text-md text-[#248AF0] font-normal">
+            Sign In
           </Link>
         </div>
         <div>
@@ -52,7 +52,7 @@ const Signup = () => {
         </div>
       </div>
     </Background>
-  </ToggleMode>
+  </ToggleMode>;
 }
 
 export default Signup

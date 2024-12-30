@@ -8,7 +8,7 @@ const Mode = ({ variant }) => {
   const dimension = 20
 
   return (
-    <div>
+    (<div>
       <button
         className="fixed bottom-5 left-5 rounded-full p-4 bg-themeColor dark:bg-slate-900 text-white shadow-lg dark:text-yellow-200 z-[100]"
         onClick={() => dispatch(setTheme(!darkMode))}
@@ -20,7 +20,10 @@ const Mode = ({ variant }) => {
             alt="Moooon"
             width={dimension}
             height={dimension}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         ) : (
           <Image
             src="/Sun.svg"
@@ -28,11 +31,14 @@ const Mode = ({ variant }) => {
             alt="Suuuun"
             width={dimension}
             height={dimension}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         )}
       </button>
-    </div>
-  )
+    </div>)
+  );
 }
 
 export default Mode
